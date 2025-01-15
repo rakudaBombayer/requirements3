@@ -129,3 +129,9 @@
 ## 7.認証機能
 メールアドレス認証
    - Laravelの機能で実装
+
+## 8.設計
+以下のページにまとめてあります。
+
+
+https://www.figma.com/design/PyZnGHbZNIjUz17jARarI1/%E3%82%B9%E3%82%B1%E3%83%80%E3%83%81?node-id=0-1&p=f&t=BJV3u5HeZA0Pb8lW-0
