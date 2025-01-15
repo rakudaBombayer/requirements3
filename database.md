@@ -17,75 +17,95 @@ https://app.diagrams.net/?libs=general;uml;er
 
 ## データベース
 
-        テーブル名request
-        request_ID PK
-        user_ID FK
-        title
-        help_category_ID FK
-        requested_date : date
-        image_ID FK
-        payment_ID FK
-        estimated_time : int
-        general_area : string
-        deadline_ID FK
-        created_at : timestamp
-        updated_at : timestamp
-        isDeleted : boolean
 
 
-        テーブル名user
-        user_ID PK
-        nickname
-        family_name
-        given_name
-        profile_image
-        birth_date
-        address
-        email
-        self_introduction
-        password
+        request
+        | 列名       | データ型      | 制約                               |
+        |-----------|--------------|---------------------------------- |
+        |request_ID |              |        PK                         |
+        |user_ID    |              |            FK                     |   
+        |title      |              |                                  |
+        |help_category_ID|          |      FK                            |
+        |requested_date | date      |                                    |
+        |image_ID       |            |      FK                          |
+        |payment_ID   |                | FK                            |
+        |estimated_time |int            |                               |  
+        |general_area |string        |                                    |
+        |deadline_ID |              |         FK                         |
+        |created_at | timestamp     |                                    |
+        |updated_at | timestamp     |                                    |
+        |isDeleted |boolean        |                                      |
 
 
-        テーブル名applicant
-        applicant_ID PK
-        user_ID FK
-        requester_ID FK
-
-        テーブル名chat_room
-        chat_room_ID PK
-        requester_ID FK
-        created at
-        updated at
-
-        テーブル名chat_message
-        message_id FK
-        chat_room_ID FK
-        user_id FK
-        text
-        timestamp
-
-        テーブル名help_category
-        help_category_ID PK
-        help_name
-        help_details
-
-        テーブル名image
-        imageID PK
-        image1
-        image2
-        image3
-        image4
-
-        テーブル名payment
-        payment_ID
-        1.cash 2.other
-        amount
-        item
+        user
+        | 列名       | データ型      | 制約                               |
+        |-----------|--------------|---------------------------------- |
+        |user_ID      |              |  PK                               |
+        |nickname     |               |                                  |
+        |family_name  |               |                                  |
+        |given_name    |               |                                 |        
+        |profile_image |                |                                |
+        |birth_date    |                |                                |
+        |address       |                |                                |  
+        |email          |               |                                |
+        |self_introduction|             |                                |
+        |password|                       |                                |
 
 
-        テーブル名deadline
-        deadline_ID PK
+        applicant
+        | 列名       | データ型      | 制約                               |
+        |-----------|--------------|---------------------------------- |
+        |applicant_ID |             |       PK                          |
+        |user_ID       |             |        FK                        |
+        |requester_ID   |             |         FK                       |
+
+        chat_room
+        | 列名       | データ型      | 制約                               |
+        |-----------|--------------|---------------------------------- |
+        |chat_room_ID |               |         PK                      |
+        |requester_ID  |               |      FK                        |
+        |created at    |                |                                |
+        |updated at    |                |                                |
+
+        chat_message
+        | 列名       | データ型      | 制約                               |
+        |-----------|--------------|---------------------------------- |
+        |message_id   |             |       PK                          |
+        |chat_room_ID |              |       FK                         |
+        |user_id       |              |       FK                        |
+        |text          |               |                                 |
+        |timestamp     |               |                                 |
+        
+        help_category
+        | 列名       | データ型      | 制約                               |
+        |-----------|--------------|---------------------------------- |
+        |help_category_ID|          |                               PK   |
+        |help_name |                |                                    |
+        |help_details |              |                                    |
+
+        image
+        | 列名       | データ型      | 制約                               |
+        |-----------|--------------|---------------------------------- |
+        |imageID      |              |    PK                             |
+        |image1       |                |                                 |
+        |image2        |                |                                |
+        |image3        |                |                                |
+        |image4        |                |                                |
+
+        payment
+        | 列名       | データ型      | 制約                               |
+        |-----------|--------------|---------------------------------- |
+        |payment_ID  |            |                                   |
+        |1.cash 2.other|            |                                   |
+        |amount      |                |                                 |
+        |item        |                |                                  |
+
+
         deadline
+        | 列名       | データ型      | 制約                               |
+        |-----------|--------------|---------------------------------- |
+        |deadline_ID  |              |PK                                 |
+        |deadline     |               |                                  |
         
         
 
