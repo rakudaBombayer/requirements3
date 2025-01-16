@@ -5,7 +5,8 @@ drowo.io
 
 https://app.diagrams.net/?libs=general;uml;er#G1-Txg7ZXKoiwRgiHxHORMqp8T8GaGEOi0#%7B%22pageId%22%3A%22R2lEEEUBdFMjLlhIrx00%22%7D
 
-<img width="648" alt="スクリーンショット 2025-01-16 15 56 04" src="https://github.com/user-attachments/assets/de69ced8-79a9-4668-8337-980f20979eba" />
+<img width="623" alt="スクリーンショット 2025-01-16 16 31 56" src="https://github.com/user-attachments/assets/fe2d4b97-f8b2-4a28-b45e-4f5c24cd0bb4" />
+
 
 
 
