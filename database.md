@@ -12,92 +12,98 @@ https://app.diagrams.net/?libs=general;uml;er
 
 
 request
-| 列名       | データ型      | 制約                               |
-|-----------|--------------|---------------------------------- |
-|request_ID |              |        PRIMARY KEY                         |
-|user_ID    |              |        FOREIGN KEY REFERENCES                    |   
-|title      |              |                                  |
-|help_category_ID|          |     FOREIGN KEY REFERENCES                          |
-|requested_date | date      |                                    |
-|image_ID       |            |     FOREIGN KEY REFERENCES                         |
-|payment_ID   |                | FOREIGN KEY REFERENCES                           |
-|estimated_time |int            |                               |  
-|general_area |string        |                                    |
-|deadline_ID |              |        FOREIGN KEY REFERENCES                       |
-|created_at | timestamp     |                                    |
-|updated_at | timestamp     |                                    |
-|isDeleted |boolean        |                                      |
+| 列名       | データ型      | 制約                                 |
+|-----------|--------------|----------------------------------   |
+|request_ID |      INT        |        PRIMARY KEY               |
+|user_ID    |       INT       |        FOREIGN KEY REFERENCES    |   
+|help_category_ID|    INT      |     FOREIGN KEY REFERENCES      |
+|requested_date | DATE      |                                    |
+|image_ID       |  INT          |     FOREIGN KEY REFERENCES     |
+|payment_ID   |  INT              | FOREIGN KEY REFERENCES       |
+|estimated_time |  INT            |                              |  
+|general_area |VARCHAR(255)        |                             |
+|deadline_ID |   INT           |        FOREIGN KEY REFERENCES   |
+|created_at | TIMESTAMP     |                                    |
+|updated_at | TIMESTAMP     |                                    |
+|isDeleted |BOOLEAN  |                                           |
 
 
 user
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
-|user_ID      |              |  PRIMARY KEY                             |
-|nickname     |               |                                  |
-|family_name  |               |                                  |
-|given_name    |               |                                 |        
-|profile_image |                |                                |
-|birth_date    |                |                                |
-|address       |                |                                |  
-|email          |               |                                |
-|self_introduction|             |                                |
-|password|                       |                                |
+|user_ID      |    INT          |  PRIMARY KEY                               |
+|nickname     |     VARCHAR(50)          |                                   |
+|family_name  |    VARCHAR(30)           |                                   |
+|given_name    |   VARCHAR(30)            |                                  |        
+|profile_image |   VARCHAR(255)             |                                |
+|birth_date    |   DATE             |                                        |
+|address       |     TEXT           |                                        |  
+|email          |     VARCHAR(100)          |                                |
+|self_introduction|    TEXT         |                                        |
+|password|       VARCHAR(255)                |                               |
 
 
 applicant
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
-|applicant_ID |             |       PRIMARY KEY                         |
-|user_ID       |             |     FOREIGN KEY REFERENCES                        |
-|requester_ID   |             |      FOREIGN KEY REFERENCES                       |
+|applicant_ID |     INT        |       PRIMARY KEY                         |
+|user_ID       |   INT          |     FOREIGN KEY REFERENCES                        |
+|requester_ID   |   INT          |      FOREIGN KEY REFERENCES                       |
 
 chat_room
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
-|chat_room_ID |               |       PRIMARY KEY                      |
-|requester_ID  |               |     FOREIGN KEY REFERENCES                       |
-|created at    |                |                                |
-|updated at    |                |                                |
+|chat_room_ID |     INT          |       PRIMARY KEY                      |
+|requester_ID  |    INT           |     FOREIGN KEY REFERENCES                       |
+|created at    |     TIMESTAMP           |                                |
+|updated at    |     TIMESTAMP           |                                |
 
 chat_message
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
-|message_id   |             |       PRIMARY KEY                          |
-|chat_room_ID |              |      FOREIGN KEY REFERENCES                        |
-|user_id       |              |     FOREIGN KEY REFERENCES                       |
-|text          |               |                                 |
-|timestamp     |               |                                 |
-        
+|message_id   |    INT         |       PRIMARY KEY                          |
+|chat_room_ID |    INT          |      FOREIGN KEY REFERENCES                        |
+|user_id       |    INT          |     FOREIGN KEY REFERENCES                       |
+|text          |    TEXT           |                                 |
+|created_at     |   TIMESTAMP            |                                 |
+|updated_at    |    TIMESTAMP           |                                  |
+(メッセージ編集機能を拡張性として残すが最初つける必要がない時もcreated_atとupdated_atが入りますか？)
+
 help_category
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
-|help_category_ID|          |            PRIMARY KEY  |
-|help_name |                |                                    |
-|help_details |              |                                    |
+|help_category_ID|   INT       |            PRIMARY KEY  |
+|help_category_name |   VARCHAR(100)         |                           |
+|help_title |    VARCHAR(255)            |                                    |
+|help_details |    TEXT          |                                    |
 
 image
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
-|imageID      |              |   PRIMARY KEY                            |
-|image1       |                |                                 |
-|image2        |                |                                |
-|image3        |                |                                |
-|image4        |                |                                |
+|imageID      |   INT           |   PRIMARY KEY                     |
+|image1       |    VARCHAR(255)            |                                 |
+|image2        |   VARCHAR(255)             |                                |
+|image3        |   VARCHAR(255)             |                                |
+|image4        |  VARCHAR(255)              |                                |
 
 payment
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
-|payment_ID  |            |                                   |
-|1.cash 2.other|            |                                   |
-|amount      |                |                                 |
-|item        |                |                                  |
+|payment_ID  |  INT          |                                   |
+|payment_method|  VARCHAR(20)          |     NOT NULL                       |
+|amount      |   DECIMAL(4,0)             |                                 |
+|item        |  VARCHAR(100)             |                                  |
+
+payment_methodのは現金か物品の2択だがデータ型はあってますか？
+Booleanがただしい？
 
 
 deadline
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
-|deadline_ID  |              |PRIMARY KEY                                |
-|deadline     |               |                                  |
+|deadline_ID  |   INT           |PRIMARY KEY                                |
+|deadline     |   DATE            |                                  |
+|deleted_at      |  TIMESTAMP          |                                  |
         
 
 参考
