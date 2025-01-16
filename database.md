@@ -2,9 +2,11 @@
 
 ER図
 drowo.io
-https://app.diagrams.net/?libs=general;uml;er
 
-<img width="590" alt="スクリーンショット 2025-01-15 22 46 57" src="https://github.com/user-attachments/assets/bad88f84-7cad-4575-9f4d-666789222286" />
+https://app.diagrams.net/?libs=general;uml;er#G1-Txg7ZXKoiwRgiHxHORMqp8T8GaGEOi0#%7B%22pageId%22%3A%22R2lEEEUBdFMjLlhIrx00%22%7D
+
+<img width="648" alt="スクリーンショット 2025-01-16 15 56 04" src="https://github.com/user-attachments/assets/de69ced8-79a9-4668-8337-980f20979eba" />
+
 
 
 
@@ -17,11 +19,11 @@ request
 |request_ID |      INT        |        PRIMARY KEY               |
 |user_ID    |       INT       |        FOREIGN KEY REFERENCES    |   
 |help_category_ID|    INT      |     FOREIGN KEY REFERENCES      |
-|requested_date | DATE      |          NOT NULL                          |
+|requested_date | DATE      |          NOT NULL                  |
 |image_ID       |  INT          |     FOREIGN KEY REFERENCES     |
 |payment_ID   |  INT              | FOREIGN KEY REFERENCES       |
-|estimated_time |  INT            |       NOT NULL                       |  
-|general_area |VARCHAR(255)        |      NOT NULL                       |
+|estimated_time |  INT            |       NOT NULL               |  
+|general_area |VARCHAR(255)        |      NOT NULL               |
 |deadline_ID |   INT           |        FOREIGN KEY REFERENCES   |
 |created_at | TIMESTAMP     |                                    |
 |updated_at | TIMESTAMP     |                                    |
@@ -106,14 +108,10 @@ deadline
 |deadline_ID  |   INT           |PRIMARY KEY                                |
 |deadline     |   DATE            |    NOT NULL                              |
 |deleted_at      |  TIMESTAMP          |                                  |
-        
 
-参考
-        genre
-| 列名       | データ型      | 制約                             |
-|-----------|--------------|--------------------------------|
-| genre_id  | BIGINT(20)   | PRIMARY KEY                    |
-| genre_name| VARCHAR(100) | NOT NULL                       |
+deleted_atってひつようか_
+これは依頼投稿に使えるのか?
+requestテーブルにidDeletedがあるからどちらかだけでいい?   
 
 
 
