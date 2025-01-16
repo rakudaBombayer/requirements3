@@ -28,7 +28,6 @@ request
 |deadline_ID |   INT           |        FOREIGN KEY REFERENCES   |
 |created_at | TIMESTAMP     |                                    |
 |updated_at | TIMESTAMP     |                                    |
-|isDeleted |BOOLEAN  |                                           |
 
 
 user
@@ -71,9 +70,6 @@ chat_message
 |created_at     |   TIMESTAMP            |                                 |
 |updated_at    |    TIMESTAMP           |                                  |
 
-
-(メッセージ編集機能を拡張性として残すが最初つける必要がない時もcreated_atとupdated_atが入りますか？)
-
 help_category
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
@@ -86,10 +82,8 @@ image
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
 |imageID      |   INT           |   PRIMARY KEY                     |
-|image1       |    VARCHAR(255)            |                                 |
-|image2        |   VARCHAR(255)             |                                |
-|image3        |   VARCHAR(255)             |                                |
-|image4        |  VARCHAR(255)              |                                |
+|image      |    VARCHAR(255)            |                                 |
+
 
 payment
 | 列名       | データ型      | 制約                               |
@@ -100,8 +94,6 @@ payment
 |item        |  VARCHAR(100)             |                                  |
 
 payment_methodのは現金か物品の2択だがデータ型はあってますか？
-Booleanがただしい？
-
 
 deadline
 | 列名       | データ型      | 制約                               |
@@ -110,9 +102,6 @@ deadline
 |deadline     |   DATE            |    NOT NULL                              |
 |deleted_at      |  TIMESTAMP          |                                  |
 
-deleted_atってひつようか_
-これは依頼投稿に使えるのか?
-requestテーブルにidDeletedがあるからどちらかだけでいい?   
 
 
 
