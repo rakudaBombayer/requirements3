@@ -1,15 +1,14 @@
 # データベース定義書
 
 ER図
-drowo.io
+drowo.io↓
 
 https://app.diagrams.net/?libs=general;uml;er#G1-Txg7ZXKoiwRgiHxHORMqp8T8GaGEOi0#%7B%22pageId%22%3A%22R2lEEEUBdFMjLlhIrx00%22%7D
 
 <img width="636" alt="スクリーンショット 2025-01-16 22 42 23" src="https://github.com/user-attachments/assets/412f2ffd-f960-4177-bf03-9d8a84ee8f77" />
 
 
-## データベース
-
+## テーブル
 
 request
 | 列名       | データ型      | 制約                                 |
