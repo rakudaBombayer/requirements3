@@ -15,15 +15,15 @@ request
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
 |request_ID |              |        PRIMARY KEY                         |
-|user_ID    |              |            FK                     |   
+|user_ID    |              |        FOREIGN KEY REFERENCES                    |   
 |title      |              |                                  |
-|help_category_ID|          |      FK                            |
+|help_category_ID|          |     FOREIGN KEY REFERENCES                          |
 |requested_date | date      |                                    |
-|image_ID       |            |      FK                          |
-|payment_ID   |                | FK                            |
+|image_ID       |            |     FOREIGN KEY REFERENCES                         |
+|payment_ID   |                | FOREIGN KEY REFERENCES                           |
 |estimated_time |int            |                               |  
 |general_area |string        |                                    |
-|deadline_ID |              |         FK                         |
+|deadline_ID |              |        FOREIGN KEY REFERENCES                       |
 |created_at | timestamp     |                                    |
 |updated_at | timestamp     |                                    |
 |isDeleted |boolean        |                                      |
@@ -48,14 +48,14 @@ applicant
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
 |applicant_ID |             |       PRIMARY KEY                         |
-|user_ID       |             |        FK                        |
-|requester_ID   |             |         FK                       |
+|user_ID       |             |     FOREIGN KEY REFERENCES                        |
+|requester_ID   |             |      FOREIGN KEY REFERENCES                       |
 
 chat_room
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
 |chat_room_ID |               |       PRIMARY KEY                      |
-|requester_ID  |               |      FK                        |
+|requester_ID  |               |     FOREIGN KEY REFERENCES                       |
 |created at    |                |                                |
 |updated at    |                |                                |
 
@@ -63,8 +63,8 @@ chat_message
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
 |message_id   |             |       PRIMARY KEY                          |
-|chat_room_ID |              |       FK                         |
-|user_id       |              |       FK                        |
+|chat_room_ID |              |      FOREIGN KEY REFERENCES                        |
+|user_id       |              |     FOREIGN KEY REFERENCES                       |
 |text          |               |                                 |
 |timestamp     |               |                                 |
         
