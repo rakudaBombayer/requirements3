@@ -5,7 +5,8 @@ drowo.io↓
 
 https://app.diagrams.net/?libs=general;uml;er#G1-Txg7ZXKoiwRgiHxHORMqp8T8GaGEOi0#%7B%22pageId%22%3A%22R2lEEEUBdFMjLlhIrx00%22%7D
 
-<img width="636" alt="スクリーンショット 2025-01-16 22 42 23" src="https://github.com/user-attachments/assets/412f2ffd-f960-4177-bf03-9d8a84ee8f77" />
+
+<img width="956" alt="スクリーンショット 2025-01-17 13 42 26" src="https://github.com/user-attachments/assets/6ae719bd-567b-4444-b968-021939d7d2d7" />
 
 
 ## テーブル
@@ -16,6 +17,7 @@ request
 |request_ID |      INT        |        PRIMARY KEY               |
 |user_ID    |       INT       |        FOREIGN KEY REFERENCES    |   
 |help_category_ID|    INT      |     FOREIGN KEY REFERENCES      |
+|title |    VARCHAR(255)            |       NOT NULL             |
 |requested_date | DATE      |          NOT NULL                  |
 |image_ID       |  INT          |     FOREIGN KEY REFERENCES     |
 |payment_ID   |  INT              | FOREIGN KEY REFERENCES       |
@@ -71,7 +73,6 @@ help_category
 |-----------|--------------|---------------------------------- |
 |help_category_ID|   INT       |            PRIMARY KEY  |
 |help_category_name |   VARCHAR(100)         |      NOT NULL                  |
-|help_title |    VARCHAR(255)            |       NOT NULL                     |
 |help_details |    TEXT          |            NOT NULL                        |
 
 image
