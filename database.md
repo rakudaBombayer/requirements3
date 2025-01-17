@@ -84,12 +84,25 @@ image
 payment
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
-|payment_ID  |  INT          |       PRIMARY KEY                            |
-|payment_method|  VARCHAR(20)          |     NOT NULL                       |
-|amount      |   DECIMAL(4,0)             |                                 |
-|item        |  VARCHAR(100)             |                                  |
+|payment_ID  |  INT          |       PRIMARY KEY                           |
+|payment_method|  VARCHAR(20)          |     NOT NULL                      |
+|money_ID      |   INT             |      FOREIGN KEY REFERENCES                           |
+|item_ID        |  INT             |      FOREIGN KEY REFERENCES                         |
 
-payment_methodのは現金か物品の2択だがデータ型はあってますか？
+money
+| 列名       | データ型      | 制約                               |
+|-----------|--------------|---------------------------------- |
+|money_ID   |  INT         |       PRIMARY KEY                        |
+|amount   |  DECIMAL(4, 0)         |         NOT NULL                     |
+
+
+item
+| 列名       | データ型      | 制約                               |
+|-----------|--------------|---------------------------------- |
+|item_ID  |  INT          |       PRIMARY KEY                  |
+|item_name        |  VARCHAR(100)             |    NOT NULL    |
+
+
 
 deadline
 | 列名       | データ型      | 制約                               |
