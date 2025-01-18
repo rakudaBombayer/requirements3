@@ -41,7 +41,7 @@ applicant
 |-----------|--------------|---------------------------------- |
 |applicant_ID |     INT        |       PRIMARY KEY                         |
 |user_ID       |   INT          |     FOREIGN KEY REFERENCES                        |
-|requester_ID   |   INT          |      FOREIGN KEY REFERENCES                       |
+|request_ID   |   INT          |      FOREIGN KEY REFERENCES                       |
 
 chat_room
 | 列名       | データ型      | 制約                               |
