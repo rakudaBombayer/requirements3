@@ -14,13 +14,12 @@ request
 |request_ID |      INT        |        PRIMARY KEY               |
 |user_ID    |       INT       |        FOREIGN KEY REFERENCES    |   
 |help_category_ID|    INT      |     FOREIGN KEY REFERENCES      |
-|title |    VARCHAR(255)            |       NOT NULL             |
+|title |    VARCHAR(50)            |       NOT NULL             |
 |requested_date | DATE      |          NOT NULL                  |
 |image_ID       |  INT          |     FOREIGN KEY REFERENCES     |
 |payment_ID   |  INT              | FOREIGN KEY REFERENCES       |
 |estimated_time |  INT            |       NOT NULL               |  
 |general_area |VARCHAR(255)        |      NOT NULL               |
-|deadline_ID |   INT           |        FOREIGN KEY REFERENCES   |
 |created_at | TIMESTAMP     |                                    |
 |updated_at | TIMESTAMP     |                                    |
 
@@ -29,11 +28,8 @@ user
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
 |user_ID      |    INT          |  PRIMARY KEY                               |
-|nickname     |     VARCHAR(50)          |        NOT NULL                           |
-|family_name  |    VARCHAR(30)           |        NOT NULL                           |
-|given_name    |   VARCHAR(30)            |       NOT NULL                           |        
+|nickname     |     VARCHAR(50)          |        NOT NULL                           |       
 |profile_image |   VARCHAR(255)             |                                |
-|birth_date    |   DATE             |         NOT NULL                               |
 |address       |     TEXT           |         NOT NULL                               |  
 |email          |     VARCHAR(100)          |    NOT NULL                            |
 |self_introduction|    TEXT         |        NOT NULL                                |
@@ -69,7 +65,7 @@ help_category
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
 |help_category_ID|   INT       |            PRIMARY KEY  |
-|help_category_name |   VARCHAR(100)         |      NOT NULL                  |
+|help_name |   VARCHAR(100)         |      NOT NULL                  |
 |help_details |    TEXT          |            NOT NULL                        |
 
 image
@@ -82,32 +78,9 @@ image
 payment
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
-|payment_ID  |  INT          |       PRIMARY KEY                           |
-|payment_method|  VARCHAR(20)          |     NOT NULL                      |
-|money_ID      |   INT             |      FOREIGN KEY REFERENCES                           |
-|item_ID        |  INT             |      FOREIGN KEY REFERENCES                         |
-
-money
-| 列名       | データ型      | 制約                               |
-|-----------|--------------|---------------------------------- |
-|money_ID   |  INT         |       PRIMARY KEY                        |
-|amount   |  DECIMAL(4, 0)         |         NOT NULL                     |
-
-
-item
-| 列名       | データ型      | 制約                               |
-|-----------|--------------|---------------------------------- |
-|item_ID  |  INT          |       PRIMARY KEY                  |
-|item_name        |  VARCHAR(100)             |    NOT NULL    |
-
-
-deadline
-| 列名       | データ型      | 制約                               |
-|-----------|--------------|---------------------------------- |
-|deadline_ID  |   INT           |PRIMARY KEY                                |
-|deadline     |   DATE            |    NOT NULL                              |
-|deleted_at      |  TIMESTAMP          |                                  |
-
-
+|payment_ID  |  INT          |       PRIMARY KEY                      |
+|payment_method|  VARCHAR(20)          |     NOT NULL                 |
+|money_name      |   INT             |                                |
+|item_name        |  INT             |                                |
 
 
