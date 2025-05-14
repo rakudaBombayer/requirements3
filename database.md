@@ -4,9 +4,12 @@ ER図
 drowo.io↓
 
 https://app.diagrams.net/?libs=general;uml;er#G1-Txg7ZXKoiwRgiHxHORMqp8T8GaGEOi0#%7B%22pageId%22%3A%22R2lEEEUBdFMjLlhIrx00%22%7D
-
+修正前
 <img width="771" alt="スクリーンショット 2025-01-24 23 31 26" src="https://github.com/user-attachments/assets/41f25f99-703f-4e8d-8d38-1cf47ec8bc25" />
 
+修正後
+![スクリーンショット 2024-11-03 5 54 29](https://github.com/user-attachments/assets/34d425cb-c6dc-4174-a445-46aba859fd58)
+<img width="771" alt="スクリーンショット 2025-01-24 23 31 26" src="[https://github.com/user-attachments/assets/https://github.com/user-attachments/assets/34d425cb-c6dc-4174-a445-46aba859fd58" />
 
 
 ## テーブル
@@ -51,6 +54,8 @@ chat_room
 |-----------|--------------|---------------------------------- |
 |chat_room_ID |     INT          |       PRIMARY KEY                      |
 |requester_ID  |    INT           |     FOREIGN KEY REFERENCES                       |
+|user_id       |    INT          |     FOREIGN KEY REFERENCES                       |
+|isOpen    |     BOOLEAN           |                                |
 |created at    |     TIMESTAMP           |                                |
 |updated at    |     TIMESTAMP           |                                |
 
@@ -77,13 +82,5 @@ image
 |imageID      |   INT           |   PRIMARY KEY                     |
 |image      |    VARCHAR(255)            |                                 |
 
-
-payment
-| 列名       | データ型      | 制約                               |
-|-----------|--------------|---------------------------------- |
-|payment_ID  |  INT          |       PRIMARY KEY                      |
-|payment_method|  VARCHAR(20)          |     NOT NULL                 |
-|money_name      |   INT             |                                |
-|item_name        |  INT             |                                |
 
 
