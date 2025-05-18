@@ -64,7 +64,7 @@ chat_room
 chat_message
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
-|message_id   |    INT         |       PRIMARY KEY                          |
+|message_ID   |    INT         |       PRIMARY KEY                          |
 |chat_room_ID |    INT          |      FOREIGN KEY REFERENCES                        |
 |user_ID       |    INT          |     FOREIGN KEY REFERENCES                       |
 |text          |    TEXT           |            NOT NULL                     |
