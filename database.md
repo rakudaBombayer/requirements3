@@ -56,7 +56,7 @@ chat_room
 |-----------|--------------|---------------------------------- |
 |chat_room_ID |     INT          |       PRIMARY KEY                      |
 |requester_ID  |    INT           |     FOREIGN KEY REFERENCES                       |
-|user_id       |    INT          |     FOREIGN KEY REFERENCES                       |
+|user_ID       |    INT          |     FOREIGN KEY REFERENCES                       |
 |isOpen    |     BOOLEAN           |                                |
 |created at    |     TIMESTAMP           |                                |
 |updated at    |     TIMESTAMP           |                                |
@@ -66,7 +66,7 @@ chat_message
 |-----------|--------------|---------------------------------- |
 |message_id   |    INT         |       PRIMARY KEY                          |
 |chat_room_ID |    INT          |      FOREIGN KEY REFERENCES                        |
-|user_id       |    INT          |     FOREIGN KEY REFERENCES                       |
+|user_ID       |    INT          |     FOREIGN KEY REFERENCES                       |
 |text          |    TEXT           |            NOT NULL                     |
 |created_at     |   TIMESTAMP            |                                 |
 |updated_at    |    TIMESTAMP           |                                  |
