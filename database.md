@@ -55,7 +55,7 @@ chat_room
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
 |chat_room_ID |     INT          |       PRIMARY KEY                      |
-|requester_ID  |    INT           |     FOREIGN KEY REFERENCES                       |
+|request_ID  |    INT           |     FOREIGN KEY REFERENCES                       |
 |user_ID       |    INT          |     FOREIGN KEY REFERENCES                       |
 |isOpen    |     BOOLEAN           |                                |
 |created at    |     TIMESTAMP           |                                |
