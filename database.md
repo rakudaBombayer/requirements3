@@ -5,14 +5,13 @@ drowo.io↓
 
 https://app.diagrams.net/?libs=general;uml;er#G1-Txg7ZXKoiwRgiHxHORMqp8T8GaGEOi0#%7B%22pageId%22%3A%22R2lEEEUBdFMjLlhIrx00%22%7D
 
+
 修正前
-
-<img width="771" alt="スクリーンショット 2025-01-24 23 31 26" src="https://github.com/user-attachments/assets/41f25f99-703f-4e8d-8d38-1cf47ec8bc25" />
-
-修正後
 
 <img width="771" alt="スクリーンショット 2025-01-24 23 31 26" src="https://github.com/user-attachments/assets/898ee45e-b6df-4f47-9e01-81a5ab981d03" />
 
+再修正
+![スクリーンショット 2025-06-11 18 56 51](https://github.com/user-attachments/assets/91aac09c-a56b-4293-895a-fde0bffa3200)
 
 ## テーブル
 
