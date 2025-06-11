@@ -20,8 +20,11 @@ request
 | 列名       | データ型      | 制約                                 |
 |-----------|--------------|----------------------------------   |
 |request_ID |      INT        |        PRIMARY KEY               |
-|user_ID    |       INT       |        FOREIGN KEY REFERENCES    |   
+|user_ID    |       INT       |        FOREIGN KEY REFERENCES    |  
+
 |help_category_ID|    INT      |     FOREIGN KEY REFERENCES      |
+
+|help_details |    TEXT          |            NOT NULL                        |
 |title |    VARCHAR(50)            |       NOT NULL             |
 |requested_date | DATE      |          NOT NULL                  |
 |image_ID       |  INT          |     FOREIGN KEY REFERENCES     |
@@ -75,8 +78,8 @@ help_category
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
 |help_category_ID|   INT       |            PRIMARY KEY  |
-|help_name |   VARCHAR(100)         |      NOT NULL                  |
-|help_details |    TEXT          |            NOT NULL                        |
+
+
 
 image
 | 列名       | データ型      | 制約                               |
