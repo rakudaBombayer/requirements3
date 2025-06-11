@@ -21,9 +21,7 @@ request
 |-----------|--------------|----------------------------------   |
 |request_ID |      INT        |        PRIMARY KEY               |
 |user_ID    |       INT       |        FOREIGN KEY REFERENCES    |  
-
-|help_category_ID|    INT      |     FOREIGN KEY REFERENCES      |
-
+|help_category_ID|    INT      |     NOT NULL   |
 |help_details |    TEXT          |            NOT NULL                        |
 |title |    VARCHAR(50)            |       NOT NULL             |
 |requested_date | DATE      |          NOT NULL                  |
@@ -73,11 +71,6 @@ chat_message
 |text          |    TEXT           |            NOT NULL                     |
 |created_at     |   TIMESTAMP            |                                 |
 |updated_at    |    TIMESTAMP           |                                  |
-
-help_category
-| 列名       | データ型      | 制約                               |
-|-----------|--------------|---------------------------------- |
-|help_category_ID|   INT       |            PRIMARY KEY  |
 
 
 
