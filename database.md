@@ -25,7 +25,6 @@ request
 |title |    VARCHAR(50)            |       NOT NULL             |
 |requested_date | DATE      |          NOT NULL                  |
 |image_ID       |  INT          |     FOREIGN KEY REFERENCES     |
-|payment_ID   |  INT              | FOREIGN KEY REFERENCES       |
 |estimated_time |  INT            |       NOT NULL               |  
 |general_area |VARCHAR(255)        |      NOT NULL               |
 |created_at | TIMESTAMP     |                                    |
