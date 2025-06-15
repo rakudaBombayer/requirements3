@@ -75,7 +75,7 @@ chat_message
 image
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
-|imageID      |   INT           |   PRIMARY KEY                     |
+|image_ID      |   INT           |   PRIMARY KEY                     |
 |image      |    VARCHAR(255)            |                                 |
 
 
