@@ -15,6 +15,26 @@ https://app.diagrams.net/?libs=general;uml;er#G1-Txg7ZXKoiwRgiHxHORMqp8T8GaGEOi0
 
 ## テーブル
 
+users
+| 列名       | データ型      | 制約                               |
+|-----------|--------------|---------------------------------- |
+|user_ID      |    INT          |  PRIMARY KEY                               |
+|nickname     |     VARCHAR(50)          |        NOT NULL                           |       
+|profile_image |   VARCHAR(255)             |                                |
+|address       |     TEXT           |         NOT NULL                               |  
+|email          |     VARCHAR(100)          |    NOT NULL                            |
+|self_introduction|    TEXT         |        NOT NULL                                |
+|password|       VARCHAR(255)                |     NOT NULL                          |
+
+
+images
+| 列名       | データ型      | 制約                               |
+|-----------|--------------|---------------------------------- |
+|image_ID      |   INT           |   PRIMARY KEY                     |
+|image      |    VARCHAR(255)            |                                 |
+
+
+
 requests
 | 列名       | データ型      | 制約                                 |
 |-----------|--------------|----------------------------------   |
@@ -31,24 +51,6 @@ requests
 |updated_at | TIMESTAMP     |                                    |
 
 
-users
-| 列名       | データ型      | 制約                               |
-|-----------|--------------|---------------------------------- |
-|user_ID      |    INT          |  PRIMARY KEY                               |
-|nickname     |     VARCHAR(50)          |        NOT NULL                           |       
-|profile_image |   VARCHAR(255)             |                                |
-|address       |     TEXT           |         NOT NULL                               |  
-|email          |     VARCHAR(100)          |    NOT NULL                            |
-|self_introduction|    TEXT         |        NOT NULL                                |
-|password|       VARCHAR(255)                |     NOT NULL                          |
-
-
-applicants
-| 列名       | データ型      | 制約                               |
-|-----------|--------------|---------------------------------- |
-|applicant_ID |     INT        |       PRIMARY KEY                         |
-|user_ID       |   INT          |     FOREIGN KEY REFERENCES                        |
-|request_ID   |   INT          |      FOREIGN KEY REFERENCES                       |
 
 chat_rooms
 | 列名       | データ型      | 制約                               |
@@ -59,6 +61,7 @@ chat_rooms
 |isOpen    |     BOOLEAN           |                                |
 |created at    |     TIMESTAMP           |                                |
 |updated at    |     TIMESTAMP           |                                |
+
 
 chat_messages
 | 列名       | データ型      | 制約                               |
@@ -72,11 +75,15 @@ chat_messages
 
 
 
-images
+applicants
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
-|image_ID      |   INT           |   PRIMARY KEY                     |
-|image      |    VARCHAR(255)            |                                 |
+|applicant_ID |     INT        |       PRIMARY KEY                         |
+|user_ID       |   INT          |     FOREIGN KEY REFERENCES                        |
+|request_ID   |   INT          |      FOREIGN KEY REFERENCES                       |
+
+
+
 
 
 
