@@ -15,7 +15,7 @@ https://app.diagrams.net/?libs=general;uml;er#G1-Txg7ZXKoiwRgiHxHORMqp8T8GaGEOi0
 
 ## テーブル
 
-request
+requests
 | 列名       | データ型      | 制約                                 |
 |-----------|--------------|----------------------------------   |
 |request_ID |      INT        |        PRIMARY KEY               |
@@ -31,7 +31,7 @@ request
 |updated_at | TIMESTAMP     |                                    |
 
 
-user
+users
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
 |user_ID      |    INT          |  PRIMARY KEY                               |
@@ -43,14 +43,14 @@ user
 |password|       VARCHAR(255)                |     NOT NULL                          |
 
 
-applicant
+applicants
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
 |applicant_ID |     INT        |       PRIMARY KEY                         |
 |user_ID       |   INT          |     FOREIGN KEY REFERENCES                        |
 |request_ID   |   INT          |      FOREIGN KEY REFERENCES                       |
 
-chat_room
+chat_rooms
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
 |chat_room_ID |     INT          |       PRIMARY KEY                      |
@@ -60,7 +60,7 @@ chat_room
 |created at    |     TIMESTAMP           |                                |
 |updated at    |     TIMESTAMP           |                                |
 
-chat_message
+chat_messages
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
 |message_ID   |    INT         |       PRIMARY KEY                          |
@@ -72,7 +72,7 @@ chat_message
 
 
 
-image
+images
 | 列名       | データ型      | 制約                               |
 |-----------|--------------|---------------------------------- |
 |image_ID      |   INT           |   PRIMARY KEY                     |
